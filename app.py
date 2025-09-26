@@ -33,8 +33,7 @@ with st.container():
                     openings = generate_openings(st.session_state['topic'])
                 st.session_state['openings'] = openings
                 st.session_state['transcripts']+="=== OPENINGS ===\n" + openings + "\n\n"
-
-
+                st.rerun()
 
 if 'openings' in st.session_state:
     st.markdown("### Opening Arguments")
@@ -69,7 +68,7 @@ if 'openings' in st.session_state:
         st.session_state['round'] += 1
         st.session_state['rebuttals'].append(rebuttals)
         st.session_state['transcript'] += f"=== REBUTTAL ROUND {st.session_state['round']} ===\n{rebuttals}\n\n"
-        st.experimental_rerun()
+        st.rerun()
 
 
 if 'rebuttals' in st.session_state:
