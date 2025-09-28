@@ -1,0 +1,8 @@
+# Core app framework
+streamlit>=1.27.0
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# OpenAI API (only needed if using real AI responses)
+openai>=1.0.0
